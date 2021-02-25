@@ -1,0 +1,18 @@
+@media screen and (max-width: 700px) {
+    header .container {
+        display: flex;
+        flex-direction: column; /*Os itens do container irão se alinhar em colunas verticais*/
+    }
+
+    .botao {
+        margin-top: 5px;
+        width: 190px;
+        height: 60px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .info {
+        width: 50%;
+    }
+}

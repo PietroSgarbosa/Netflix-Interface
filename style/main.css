@@ -1,0 +1,112 @@
+/*Técnica do Reset de CSS para evitar problemas de compatibilidade com diferentes browsers*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Definir que o tamanho dos elementos em uma box não ultrapasse limites*/
+    text-decoration: none;
+}
+
+/*Criando variáveis dentro do CSS para otimizar o uso de cores*/
+:root {
+    --vermelho: #E50914;
+    --preto: #141414;
+    --cinza: #AAA;
+    --branco: #FFF;
+}
+
+/*Corpo da aplicação*/
+
+body {
+    background: var(--preto);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logotipo {
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+header nav a {
+    color: var(--cinza);
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: var(--branco);
+}
+
+/*Filme principal, tela em destaque*/
+
+.main-movie {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('/image/dark1.jpg');
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main-movie .info {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.title {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial;
+}
+
+.botao {
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 12px;
+    font-size: 12px;
+    cursor: pointer; /*Para identificar que é um botão*/
+    transition: .3s ease all; /*Animação de transição entre branco e preto conometrada por segundos*/
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.botao:hover {
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+/*Teste de container para alinhar vários elementos da página*/
+/*A função das classes Wrappers*/
+
+.container {
+    margin: 20px;
+}
+
+.main-movie .container {
+    width: 70%;
+}
+
+.movie-box {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carousel {
+    margin-top: 5px;
+}
